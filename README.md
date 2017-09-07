@@ -58,8 +58,8 @@ View our [CHANGELOG.md](https://github.com/siggame/Joueur/blob/master/CHANGELOG.
 
 ## License
 
-View our [LICENSE.md](https://github.com/siggame/Joueur/blob/master/LICENSE.md)
+View our [LICENSE.md](https://github.com/siggame/colisee/blob/master/LICENSE.md)
 
 ## Contributing
 
-View our [CONTRIBUTING.md](https://github.com/siggame/Joueur/blob/master/CONTRIBUTING.md)
+View our [CONTRIBUTING.md](https://github.com/siggame/colisee/blob/master/CONTRIBUTING.md)
