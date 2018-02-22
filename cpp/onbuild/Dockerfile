@@ -5,6 +5,7 @@ RUN mkdir -p /usr/src/client && apt-get update && apt-get install -y \
     g++ \
     git \
     ninja-build \
+    libboost-all-dev \
     && apt-get clean \
     && cd /usr/src \
     && git clone https://github.com/siggame/Joueur.cpp.git client \
