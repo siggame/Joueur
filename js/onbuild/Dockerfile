@@ -1,11 +1,10 @@
-FROM node:8.4.0
+FROM node:latest
 
 RUN mkdir -p /usr/src/client
 WORKDIR /usr/src/client
 
-ONBUILD ARG NODE_ENV
-ONBUILD ENV NODE_ENV $NODE_ENV
-ONBUILD COPY package.json /usr/src/client/
+ONBUILD ENV NODE_ENV production
+ONBUILD COPY package.json .
 ONBUILD RUN npm install && npm cache clean --force
 
 ONBUILD COPY . /usr/src/client
