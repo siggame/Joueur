@@ -1,16 +1,17 @@
 FROM debian:testing
 
-RUN mkdir -p /usr/src/client && apt-get update && apt-get install -y \
+RUN mkdir -p /usr/src/client \
+    && apt-get update \
+    && apt-get install -y \
     cmake \
     g++ \
     git \
     ninja-build \
     libboost-all-dev \
     && apt-get clean \
-    && cd /usr/src \
-    && git clone https://github.com/siggame/Joueur.cpp.git client \
-    && mkdir -p client/build \
-    && cd client/build \
+    && git clone https://github.com/siggame/Joueur.cpp.git /usr/src/client \
+    && mkdir -p /usr/src/client/build \
+    && cd /usr/src/client/build \
     && cmake -GNinja .. -DCMAKE_BUILD_TYPE:STRING=Release && ninja
 WORKDIR /usr/src/client/build
 

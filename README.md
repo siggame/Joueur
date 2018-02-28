@@ -36,13 +36,9 @@ Example Joueur.cpp Dockerfile:
 ```Dockerfile
 FROM siggame/joueur:cpp-onbuild as build
 
-FROM debian:buster-slim
+FROM siggame/joueur:cpp-base
 
-RUN mkdir /client
-WORKDIR /client
-COPY --from=build /usr/src/client/build/cpp-client .
-
-ENTRYPOINT ["./cpp-client", "Saloon"]
+COPY --from=build --chown=siggame:siggame /usr/src/client/build/cpp-client .
 ```
 
 ## Contributors
