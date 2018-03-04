@@ -43,10 +43,7 @@ COPY --from=build --chown=siggame:siggame /usr/src/client/build/cpp-client .
 
 ## Contributors
 
-- [Russley Shaw](https://github.com/russleyshaw)
 - [user404d](https://github.com/user404d)
-- [Hannah Reinbolt](https://github.com/LoneGalaxy)
-- [Matthew Qualls](https://github.com/MatthewQualls)
 
 ## Change Log
 
@@ -54,7 +51,7 @@ View our [CHANGELOG.md](https://github.com/siggame/Joueur/blob/master/CHANGELOG.
 
 ## License
 
-View our [LICENSE.md](https://github.com/siggame/colisee/blob/master/LICENSE.md)
+View our [LICENSE](https://github.com/siggame/colisee/blob/master/LICENSE)
 
 ## Contributing
 
