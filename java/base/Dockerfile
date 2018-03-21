@@ -1,7 +1,8 @@
 FROM java:jre-alpine
 
 RUN addgroup -S siggame && adduser -S -G siggame siggame \
-    && mkdir /client
+    && mkdir /client \
+    && apk add --no-cache tini
 WORKDIR /client
 
-ENTRYPOINT ["java", "-jar", "java-client.jar"]
+ENTRYPOINT ["/sbin/tini", "--", "java", "-jar", "java-client.jar"]
