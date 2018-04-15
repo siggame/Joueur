@@ -7,4 +7,4 @@ RUN groupadd -r siggame && useradd -r -g siggame siggame \
     && chmod +x /tini
 WORKDIR /client
 
-ENTRYPOINT ["/tini", "--", "./cs-client"]
+ENTRYPOINT ["/tini", "--", "./joueur-cs"]
