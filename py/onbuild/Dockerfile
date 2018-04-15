@@ -17,3 +17,4 @@ ONBUILD COPY requirements.txt .
 ONBUILD RUN venv/bin/pip install --no-cache-dir -r requirements.txt
 
 ONBUILD COPY . .
+ONBUILD RUN venv/bin/python -B -m compileall -f -q -x venv .
