@@ -1,5 +1,17 @@
-FROM siggame/joueur:cpp-onbuild as build
+FROM debian:testing
 
-FROM siggame/joueur:cpp-base
+WORKDIR /client
+COPY . .
+RUN apt-get update \
+    && apt-get install -y \
+    cmake \
+    g++ \
+    git \
+    ninja-build \
+    libboost-all-dev \
+    && apt-get clean \
+    && mkdir build \
+    && cd build \
+    && cmake -GNinja .. -DCMAKE_BUILD_TYPE:STRING=Release && ninja
 
-COPY --from=build --chown=siggame:siggame /usr/src/client/build/cpp-client /client/cpp-client
+ENTRYPOINT ["./build/cpp-client"]
